@@ -1,0 +1,1 @@
+# Mogomind_E-commerce_Study_POCs
