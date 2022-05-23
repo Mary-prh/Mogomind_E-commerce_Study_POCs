@@ -17,7 +17,7 @@
 Using PySpark, the list of the existing cities was extracted from geolocation_dataset.csv and loaded in the "City table" of Postgresql.
 - The data of orders_dataset.csv and customers_dataset.csv and the table of "City" from Postgresql were joined in Pyspark. 
 - Data were grouped by "ordertime" and "cityname"
-Data were loaded in the " cityorder " warehouse table in Postgresql.
+- Data were loaded in the " cityorder " warehouse table in Postgresql.
 
 Several reports can be extracted based on annual/monthly order quantities for different cities using the created tables.
 
