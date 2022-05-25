@@ -1,6 +1,6 @@
-
+from pyspark.sql import SparkSession
 from cleanCities import cleanCities
-def insertCities(spark) :
+def insertCities(spark : SparkSession) :
     cleanCities()
     cities = spark.read.option('header','true').option('inferSchema', 'true')\
         .csv('Spark/e-commerce/brazilianSupermarket/datasets/olist_geolocation_dataset.csv')

@@ -1,9 +1,9 @@
 from dbConnect import connection
 
-def cleanCities():
+def cleanData():
     print("here")
     conn = connection()
     cur = conn.cursor()
-    cur.execute("Delete from city")
+    cur.execute("Delete from sales_category")
     conn.commit()
     cur.close()
