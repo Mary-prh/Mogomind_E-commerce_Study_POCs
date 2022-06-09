@@ -28,9 +28,9 @@ def insertReason(spark: SparkSession):
     reasonDf =  loadData(spark)\
         .select('Reason','SubReason')\
         .withColumnRenamed('Reason','reason_title')\
-        .distinct()\
+        .distinct()
     
-    ## Joining Subreasons with DB Reason on Reason column to find the Parent Id fro SubReasons
+    ## Joining Subreasons with DB Reason on Reason column to find the Parent Id for SubReasons
     reasons=  reasons\
             .join(reasonDf, on='reason_title' )\
             .select('reason_id','SubReason')\
@@ -42,6 +42,7 @@ def insertReason(spark: SparkSession):
             .options(**pgOptions)\
             .option("dbtable", "reason") \
             .mode('append').save()
+
     
         
     
